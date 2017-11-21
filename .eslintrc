@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  }
+  /*
+   * 困るルールがあった場合
+   * rules : {}に追記して緩めていく
+   */
+}
