@@ -1,5 +1,6 @@
 export default class Test {
   static hello() {
-    alert('hello');
+    const hi = document.getElementById('helloWorld');
+    hi.innerHTML = 'こんにちは';
   }
 }
