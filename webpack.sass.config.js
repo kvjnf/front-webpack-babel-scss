@@ -34,7 +34,12 @@ module.exports = {
           'sass-loader',
         ]
       })
-    }]
+    },
+    {
+      test: /\.(jpg|png|gif)$/,
+      loader: 'file-loader?name=assets/img/[name].[ext]'
+    }
+    ]
   },
   resolve: {
     alias: {},
