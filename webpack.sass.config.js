@@ -19,8 +19,12 @@ module.exports = {
     rules: [{
       test: /\.(css|sass|scss)$/,
       use: ExtractTextPlugin.extract({
-        use: [
-          'css-loader',
+        use: [{
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          },
           {
             loader: 'postcss-loader',
             options: {
@@ -34,12 +38,7 @@ module.exports = {
           'sass-loader',
         ]
       })
-    },
-    {
-      test: /\.(jpg|png|gif)$/,
-      loader: 'file-loader?name=assets/img/[name].[ext]'
-    }
-    ]
+    }]
   },
   resolve: {
     alias: {},
